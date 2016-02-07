@@ -1,0 +1,55 @@
+@import "../bourbon/bourbon";
+@import "../neat/neat";
+
+@mixin col-with-gutter($cols, $gutter, $display){
+  @include span-columns($cols);
+  @include display($display);
+  margin-right: $gutter;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 100px;
+
+  h1 {
+    font-size: 70px;
+    color: #2b3645;
+  }
+
+  input {
+    width: 800px;
+    height: 50px;
+    font-size: 23px;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid lightgray;
+  }
+}
+
+
+.keys {
+  @include omega(12n);
+  @include shift(1);
+  @include span-columns(10);
+  font-weight: 700;
+
+  .key {
+    @include col-with-gutter(1, 5px, flex);
+    @include flex-direction(columns);
+    @include align-items(center);
+    border-radius: 5px;
+    text-align: center;
+    height: 70px;
+    margin-top: 5px;
+    background-color: #3499e0;
+    color: white;
+
+    p {
+      width: 100%;
+    }
+  }
+}
