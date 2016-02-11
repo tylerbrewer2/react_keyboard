@@ -36,5 +36,9 @@
     "vinyl-buffer": "1.0.0",
     "vinyl-source-stream": "1.1.0",
     "watchify": "3.4.0"
+  },
+  "dependencies": {
+    "react-redux": "^4.4.0",
+    "redux": "^3.3.1"
   }
 }
