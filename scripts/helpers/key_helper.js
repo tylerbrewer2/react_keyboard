@@ -11,6 +11,7 @@ var Helper = {
     });
     return alphabetArray;
   },
+  
   getNumberKeys : function() {
     var numbers = _.range(1,9);
     return numbers;
