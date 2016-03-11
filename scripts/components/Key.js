@@ -8,7 +8,6 @@ var Key = React.createClass({
       return 'clear';
     }
   },
-
   render : function() {
     var letter = this.props.letter;
     return (

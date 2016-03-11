@@ -9,9 +9,20 @@ var App = React.createClass({
       inputValue: ''
     });
   },
+
   updateState: function(letter) {
-    this.state.inputValue = this.state.inputValue + letter;
-    this.setState({ inputValue : this.state.inputValue });
+    var inputVal = this.state.inputValue;
+    switch(letter.toLowerCase()) {
+      case 'delete':
+        inputVal = inputVal.slice(0, -1);
+        break;
+      case 'clear':
+        inputVal = '';
+        break;
+      default:
+        inputVal = inputVal + letter;
+    }
+    this.setState({ inputValue : inputVal });
   },
 
   render : function() {
